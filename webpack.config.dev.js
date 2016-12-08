@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const validate = require('webpack-validator');
 
@@ -13,7 +12,7 @@ module.exports = validate({
   ],
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'js/bundle.js'
   },
@@ -23,15 +22,13 @@ module.exports = validate({
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
       __DEV__: true
-    }),
-    new ExtractTextPlugin('css/styles.css')
+    })
   ],
   module: {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css', 'postcss'],
-        // loader: ExtractTextPlugin.extract('style', ['css', 'postcss']),
+        loaders: ['style', 'css', 'postcss']
       },
       {
         test: /\.js[x]?$/,

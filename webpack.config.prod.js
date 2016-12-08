@@ -9,7 +9,7 @@ module.exports = validate({
   entry: './app/client/index.js',
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'js/bundle.js'
   },
@@ -22,7 +22,6 @@ module.exports = validate({
       __DEV__: false
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('css/styles.css')
@@ -37,6 +36,7 @@ module.exports = validate({
       {
         test: /(\.css)$/,
         loader: ExtractTextPlugin.extract("css?sourceMap")
+        // loader: ExtractTextPlugin.extract('style', ['css', 'postcss']),
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,

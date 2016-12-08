@@ -1,0 +1,10 @@
+@import '../../bower_components/foundation/css/normalize.css';
+@import '../../bower_components/foundation/css/foundation.css';
+
+@import 'partials/variables.css';
+/*@import '../components/component1/component1.css';*/
+/*@import '../components/component2/component2.css';*/
+
+a {
+  color: var(--colorRed);
+}

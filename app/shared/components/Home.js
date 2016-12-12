@@ -12,4 +12,8 @@ class Home extends Component {
   }
 }
 
+Home.need = [
+  require('../../api/fake')
+]
+
 export default Home;

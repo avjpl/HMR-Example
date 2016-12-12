@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
     "event-source-polyfill": "0.0.7",

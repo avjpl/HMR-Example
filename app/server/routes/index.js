@@ -5,8 +5,8 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const router = express.Router();
 
-const handleRequest = require('../server/utils/handleRequest');
-const config = require('../../webpack.config.dev');
+const handleRequest = require('../../server/utils/handleRequest');
+const config = require('../../../webpack.config.dev');
 
 module.exports = function() {
   function start({ app, env, wpConfig }, cb) {

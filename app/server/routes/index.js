@@ -24,6 +24,10 @@ module.exports = function() {
       app.use(require('compression')());
     }
 
+    app.get('/favicon.ico', (req, res) => {
+      res.send('');
+    });
+
     app.use(express.static('dist'));
     app.get('*', handleRequest().init);
     app.use('/', router);

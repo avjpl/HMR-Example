@@ -8,9 +8,9 @@ module.exports = options => {
     })(env);
 
     return cb(null, config);
-  }
+  };
 
   return {
     start: start
   };
-}
+};

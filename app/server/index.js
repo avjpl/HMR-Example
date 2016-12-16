@@ -6,7 +6,6 @@ const defaultMiddleware = require('systemic-express').defaultMiddleware;
 const environment = require('./modules/environment');
 const webpackConfig = require('./modules/webpack-config');
 const config = require('./modules/config');
-const logger = require('./modules/logger');
 const routes = require('./routes');
 const layoutSetup = require('../layoutSetup');
 

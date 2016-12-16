@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class Home extends Component {
   render() {
@@ -14,6 +14,6 @@ class Home extends Component {
 
 Home.need = [
   require('../../api/fake')
-]
+];
 
 export default Home;

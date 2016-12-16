@@ -14,7 +14,7 @@ module.exports = () => ({
       fetchComponentData(props.components)
         .then(data => {
           const html = renderToString(
-            <RouterContext {...props} />
+            <RouterContext { ...props } />
           );
 
           res.render('index', { html, data: JSON.stringify(data[0]) });

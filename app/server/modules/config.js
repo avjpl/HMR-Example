@@ -14,9 +14,9 @@ module.exports = options => {
         }
       }
     );
-  }
+  };
 
   return {
     start: start
   };
-}
+};

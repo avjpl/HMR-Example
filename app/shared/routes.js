@@ -6,7 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Blog from './components/Blog';
 
-let routes = (
+const routes = (
   <Route path="/" component={ App }>
     <IndexRoute component={ Home }/>
     <Route path="/home" component={ Home } />

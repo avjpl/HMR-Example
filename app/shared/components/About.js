@@ -1,6 +1,5 @@
-require('./about.css');
-
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import './about.css';
 
 class About extends Component {
   render() {
